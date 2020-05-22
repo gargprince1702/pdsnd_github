@@ -229,7 +229,10 @@ def raw_data(df):
         
 def main():
     while True:
-        city, month, day = get_filters()
+        '''
+        Here we get Input From user In which base that want to filter data
+        '''
+        city, month, day = get_filters() 
         while True:
             print("**********Your selected city,month,day is mentioned Below **********")
             print("Your Selected City  is = {}.".format(city))
@@ -245,18 +248,19 @@ def main():
                 print("\t\tGreat we are ready to go ahead >>>")
                 break;
             
-        print("*"*100)      
+        print("*"*100)  
+        #load the city,month and day which user provide    
         df = load_data(city, month, day)
         print()
         print()
         print("\t\tThe Bikeshare Data represent based on Your filter mentoned Below")
-
+        # Display the Data based on user applied filter
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df,city)
         raw_data(df)
-
+        # Ask For user to continue or not
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
