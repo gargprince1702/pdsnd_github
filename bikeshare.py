@@ -209,8 +209,7 @@ def raw_data(df):
 
     while True:
         answer = input('Would you like to see 5 lines of raw data? Enter yes or no: ')
-        # Check if response is yes, print the raw data and increment count by 5
-
+        # Check if response is yes, print the raw data and increment count by 
         if answer=='yes':
             for i in range(count,len(df.index)):
                 print(" ")
@@ -262,6 +261,7 @@ def main():
             break
         else:
             print("\t\tLets Explore Bikeshare data again :)")
+            print("Ready to Go >>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
 
 if __name__ == "__main__":
