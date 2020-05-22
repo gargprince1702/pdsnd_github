@@ -253,7 +253,7 @@ def main():
         df = load_data(city, month, day)
         print()
         print()
-        print("\t\tThe Bikeshare Data represent based on Your filter mentoned Below")
+        print("\t\tThe Bikeshare Data represent based on Your filter applied mentoned Below")
         # Display the Data based on user applied filter
         time_stats(df)
         station_stats(df)
